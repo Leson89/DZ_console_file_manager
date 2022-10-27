@@ -34,6 +34,12 @@
 Для реализации основного меню можно использовать пример ниже или написать свой
 """
 
+
+def billinng():
+    return  int(input('Введите сумму'))
+def buy_sum():
+    buy = int(input('Введите сумму покупки'))
+    return buy
 def bill_program():
     bill_sum = 0
     history = []
@@ -46,10 +52,10 @@ def bill_program():
 
         choice = input('Выберите пункт меню')
         if choice == '1':
-            deposit_money = int(input('Введите сумму'))
-            bill_sum += deposit_money
+            bill_sum += billinng()
+
         elif choice == '2':
-            buy = int(input('Введите сумму покупки'))
+            buy = buy_sum()
             if buy > bill_sum:
                 print('Недостаточно средств')
             else:
@@ -62,3 +68,4 @@ def bill_program():
             break
         else:
             print('Неверный пункт меню')
+
