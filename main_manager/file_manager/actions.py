@@ -3,6 +3,12 @@ import sys
 import shutil
 
 #Создание файлов и папок
+def new_file():
+    new_file = input('Введите название файла:')
+    try:
+        file = open(new_file, 'r')
+    except:
+        file = open(new_file, 'w')
 def new():
     while True:
         print('1. создать файл')
@@ -10,11 +16,7 @@ def new():
         print('3. выход')
         choice = input('Выберите пункт меню')
         if choice == '1':
-            new_file = input('Введите название файла:')
-            try:
-                file = open(new_file, 'r')
-            except:
-                file = open(new_file, 'w')
+            new_file()
         elif choice == '2':
             folder = input('Введите название папки:')
             if not os.path.isdir(folder):
