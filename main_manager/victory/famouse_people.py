@@ -7,8 +7,6 @@ import random
 """
 
 
-
-
 def birthday():
     questions = {
         'В каком году родился М.В. Ломансов? Ответьте в формате dd.mm.yyyy': '19.11.1711',
